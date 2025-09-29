@@ -1,7 +1,30 @@
 [project]
-name = "app"
+name = "multi-agent-hotel-booking"
 version = "0.1.0"
-description = "Add your description here"
+description = "Production-ready multi-agent hotel booking system for AWS AI Engineering Month"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "python-dotenv>=1.1.1",
+    "strands-agents[a2a,litellm]>=1.8.0",
+    "strands-agents-builder>=0.1.9",
+    "strands-agents-tools>=0.2.7",
+    "uvicorn>=0.35.0",
+    "fastapi>=0.116.2",
+    "boto3>=1.40.32",
+    "bedrock-agentcore>=0.1.4",
+    "bedrock-agentcore-starter-toolkit>=0.1.12",
+    "openai-agents>=0.3.2",
+    "pydantic>=2.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+]
